@@ -110,3 +110,28 @@ hide_st_style = """
             """
 
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
+
+
+data = pd.read_excel("Police_Department_Incident_Reports__2018_to_Present.xlsx")  # Replace with the actual path to your data file
+
+
+st.title("San Francisco Crime Map")
+st.sidebar.header("Options")
+
+filtered_data = data  # Update this line to apply filters based on user selection
+
+fig = px.scatter_mapbox(
+    filtered_data,
+    lat="Latitude",  # Replace with the actual column name for latitude
+    lon="Longitude",  # Replace with the actual column name for longitude
+    hover_name="Incident Category",  # Replace with the actual column name for crime type
+    color="Incident Category",  # Replace with the actual column name for crime type (optional)
+    zoom=10
+)
+
+fig.update_layout(mapbox_style="open-street-map")
+fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+st.plotly_chart(fig)
+
