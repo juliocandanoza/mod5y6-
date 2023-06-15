@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly_express as px
+import plotly as px
 
 st.set_page_config(page_title="Reports",
                    page_icon=":cop:",
