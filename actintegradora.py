@@ -114,14 +114,12 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 
-data = pd.read_excel("Police_Department_Incident_Reports__2018_to_Present.xlsx")  # Replace with the actual path to your data file
-
+data = pd.read_excel("Police_Department_Incident_Reports__2018_to_Present-2.xlsx")  
 
 st.title("San Francisco Crime Map")
 st.sidebar.header("Options")
 
-filtered_data = data  # Update this line to apply filters based on user selection
-
+filtered_data = data 
 fig = px.scatter_mapbox(
     filtered_data,
     lat="Latitude",  # Replace with the actual column name for latitude
