@@ -6,7 +6,7 @@ st.set_page_config(page_title="Reports",
                    page_icon=":cop:",
                    layout="wide"
 )
-df = pd.read_excel("Police_Department_Incident_Reports__2018_to_Present.xlsx")
+df = pd.read_excel("Police_Department_Incident_Reports__2018_to_Present-2.xlsx")
 
 # ---- SIDEBAR ----
 
